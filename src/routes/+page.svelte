@@ -65,10 +65,7 @@
 
 		let fullSearchCriteria = `Act as my travel advisor. I'm going to 
 		Context "${specificDescriptors}"
-		
-		I want you to Give me a list of 5 recommendation that fit all of the following categories:
-		attractions, food, travel, restaurants, and excursions. 
-
+		I want you to Give me a list of 5 recommendation that fit all of the following categories attractions, food, travel, restaurants, and excursions. 
 		Make sure it fits the following criteria as well: {Vibe: ${selectedCategories}, Budget: ${cinemaType}} Please include a cost breakdown for everything based on the criteria 
 		 ${
 			selectedCategories ? `that fit all of the following categories: attractions, food, where to stay, restaurants, excursions` : ''
@@ -80,10 +77,9 @@
 			selectedCategories || specificDescriptors
 				? `If you do not have 5 recommendations that fit these criteria perfectly, do your best to suggest others that I might like.`
 				: ''
-		} Please return this response as a numbered list with the title, followed by a colon, and then a description of what to do in the city.
-		The descriptions should be a paragraph with 5 options and cost breakdown. 
-		There should be a line of whitespace between each item in the list.`;
+		} Please return this response as a numbered list with the title, followed by a colon, and then a detailed description of what to do in the city. There should be a line of whitespace between each item in the list.`;
 		
+		// (The descriptions should be a paragraph with 5 options and cost breakdown)
 		const response = await fetch('/api/getRecommendation', {
 			method: 'POST',
 			body: JSON.stringify({ searched: fullSearchCriteria }),
