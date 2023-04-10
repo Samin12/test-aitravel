@@ -62,17 +62,17 @@
 		endStream = false;
 		loading = true;
 
-		let fullSearchCriteria = `Give me a list of 5 ${cinemaType} recommendations ${
-			selectedCategories ? `that fit all of the following categories: ${selectedCategories}` : ''
+		let fullSearchCriteria = `Act as my travel advisor. I'm going to ${specificDescriptors} i want you to Give me a list of 5 recommendations ${
+			selectedCategories ? `that fit all of the following categories: attractions, food, travel, restaurants, excursions` : ''
 		}. ${
 			specificDescriptors
 				? `Make sure it fits the following description as well: ${specificDescriptors}.`
 				: ''
 		} ${
 			selectedCategories || specificDescriptors
-				? `If you do not have 5 recommendations that fit these criteria perfectly, do your best to suggest other ${cinemaType}'s that I might like.`
+				? `If you do not have 5 recommendations that fit these criteria perfectly, do your best to suggest others that I might like.`
 				: ''
-		} Please return this response as a numbered list with the ${cinemaType}'s title, followed by a colon, and then a brief description of the ${cinemaType}. There should be a line of whitespace between each item in the list.`;
+		} Please return this response as a numbered list with the title, followed by a colon, and then a brief description of what to do in the city There should be a line of whitespace between each item in the list.`;
 		const response = await fetch('/api/getRecommendation', {
 			method: 'POST',
 			body: JSON.stringify({ searched: fullSearchCriteria }),
