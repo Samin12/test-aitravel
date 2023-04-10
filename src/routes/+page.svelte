@@ -68,6 +68,7 @@
 		
 		I want you to Give me a list of 5 recommendation that fit all of the following categories:
 		attractions, food, travel, restaurants, and excursions. 
+		for each I want you to give 5 options for what to do. Like provide 5 atrractions to see etc 
 		Make sure it fits the following criteria as well: {Vibe: ${selectedCategories}, Budget: ${cinemaType}} Please include a cost breakdown for everything based on the criteria 
 		 ${
 			selectedCategories ? `that fit all of the following categories: attractions, food, travel, restaurants, excursions` : ''
