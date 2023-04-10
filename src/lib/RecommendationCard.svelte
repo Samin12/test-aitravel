@@ -28,10 +28,10 @@
 	{:then data}
 		{#if data.Poster}
 			<div in:fade class="relative flex flex-col md:flex-row bg-neutral-800/70 shadow-md p-6">
-				<div
+				<!-- <div
 					class="hidden md:block h-[250px] flex-none w-1/5 bg-cover bg-center"
 					style={`background-image: url(${data.Poster})`}
-				/>
+				/> -->
 				<div
 					class="md:hidden z-10 absolute inset-0 bg-cover bg-center"
 					style={`background-image: url(${data.Poster})`}

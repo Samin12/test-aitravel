@@ -1,8 +1,8 @@
 <div>
 	<a
 		class="my-1 flex flex-none items-center py-1 px-4 border border-white/50 rounded-full text-sm bg-white/20 hover:bg-white/50 shadow-sm hover:text-slate-900 text-white"
-		href="https://github.com/StephDietz/watch-this"
-		aria-label="Star StephDietz/watch-this on GitHub"
+		href="https://github.com/Samin12"
+		aria-label="Samin's GitHub"
 	>
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -15,6 +15,6 @@
 			/></svg
 		>
 
-		<span class="ml-2">Star on GitHub</span>
+		<span class="ml-2">GitHub</span>
 	</a>
 </div>
