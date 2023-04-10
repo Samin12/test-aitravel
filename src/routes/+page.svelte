@@ -68,10 +68,10 @@
 		
 		I want you to Give me a list of 5 recommendation that fit all of the following categories:
 		attractions, food, travel, restaurants, and excursions. 
-		for each I want you to give 5 options for what to do. Like provide 5 atrractions to see etc 
+
 		Make sure it fits the following criteria as well: {Vibe: ${selectedCategories}, Budget: ${cinemaType}} Please include a cost breakdown for everything based on the criteria 
 		 ${
-			selectedCategories ? `that fit all of the following categories: attractions, food, travel, restaurants, excursions` : ''
+			selectedCategories ? `that fit all of the following categories: attractions, food, where to stay, restaurants, excursions` : ''
 		}. ${
 			specificDescriptors
 				? `Make sure it fits the following description as well: ${specificDescriptors}.`
@@ -80,7 +80,9 @@
 			selectedCategories || specificDescriptors
 				? `If you do not have 5 recommendations that fit these criteria perfectly, do your best to suggest others that I might like.`
 				: ''
-		} Please return this response as a numbered list with the title, followed by a colon, and then a brief description of what to do in the city There should be a line of whitespace between each item in the list.`;
+		} Please return this response as a numbered list with the title, followed by a colon, and then a description of what to do in the city.
+		The descriptions should be a paragraph with 5 options and cost breakdown. 
+		There should be a line of whitespace between each item in the list.`;
 		
 		const response = await fetch('/api/getRecommendation', {
 			method: 'POST',
