@@ -28,6 +28,7 @@
 
 	$: {
 		if (searchResponse) {
+			console.log("searchResponse "+searchResponse);
 			let lastLength = recommendations.length;
 			let x = searchResponse?.split('\n');
 			recommendations = x.map((d, i) => {
@@ -80,6 +81,9 @@
 				'content-type': 'application/json'
 			}
 		});
+
+		console.log("fullSearchCriteria: "+fullSearchCriteria);
+		console.log("response: "+response);
 
 		if (response.ok) {
 			try {
