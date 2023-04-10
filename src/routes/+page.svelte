@@ -79,7 +79,8 @@
 			selectedCategories || specificDescriptors
 				? ``
 				: ''
-		} Please return this response as a numbered list with the title, followed by a colon, and then a description of what to do in the city include around 5 things for each section and include cost associated. (make it 1 big paragraph) 
+		} Please return this response as a numbered list with the title, followed by a colon, and then a very detailed description of what to do in the city
+		 include around 5 things for each section and include cost associated. (make it 1 big paragraph) 
 		 Format: "There should be a line of whitespace between each item in the list.:`;
 		
 		const response = await fetch('/api/getRecommendation', {

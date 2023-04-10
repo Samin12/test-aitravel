@@ -74,8 +74,8 @@ export async function POST({ request }: { request: any }) {
 	const payload = {
 		model: 'text-davinci-003',
 		prompt: searched,
-		temperature: 0.7,
-		max_tokens: 2048,
+		temperature: 0.1,
+		max_tokens: 3042,
 		top_p: 1.0,
 		frequency_penalty: 0.0,
 		stream: true,
